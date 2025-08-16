@@ -75,7 +75,7 @@ for cnpj in cnpjs:
 
         print('✅ Todos os arquivos foram extraídos para a memória.')
 
-        # 3. Salvando os arquivos raw em disco
+        # 2. Salvando os arquivos raw em disco
         for arq in arquivos_extraidos:
             caminho = os.path.join(path_arq_raw, arq["nome"])
             with open(caminho, "wb") as f:
@@ -105,4 +105,5 @@ for cnpj in cnpjs:
                 df.to_csv(caminho, index = False)
                 
             except Exception as e:
+
                 print(f"⚠ Não foi possível processar o arquivo {nome}: {e}")
